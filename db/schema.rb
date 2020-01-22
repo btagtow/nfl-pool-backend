@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_21_232559) do
+ActiveRecord::Schema.define(version: 2020_01_22_162830) do
 
   create_table "games", force: :cascade do |t|
     t.integer "week_id", null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2020_01_21_232559) do
     t.index ["week_id"], name: "index_selections_on_week_id"
   end
 
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "user_selections", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "selection_id", null: false
@@ -49,6 +55,8 @@ ActiveRecord::Schema.define(version: 2020_01_21_232559) do
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
+    t.string "favoriteTeam"
   end
 
   create_table "weeks", force: :cascade do |t|

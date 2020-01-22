@@ -9,4 +9,17 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         render json: @user
     end
+
+    def create 
+        @new_user = User.create(
+            first: params[:first],
+            last: params[:last],
+            points: "2",
+            status: "in",
+            image: params[:image],
+            favoriteTeam: params[:favoriteTeam]
+        )
+        render json: {message: "You have created a new user."}
+    end
+
 end

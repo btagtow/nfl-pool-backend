@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Game.destroy_all
 Week.destroy_all
+User.destroy_all
+Team.destroy_all
+
+
 new_england = "New England Patriots"
 buffalo = "Buffalo Bills"
 ny_jets = "New York Jets"
@@ -49,6 +53,39 @@ week5 = Week.create(week:5)
 week6 = Week.create(week:6)
 week7 = Week.create(week:7)
 week8 = Week.create(week:8)
+
+denver = Team.create(name: "Denver Broncos")
+kansas_city = Team.create(name: "Kansas City Chiefs")
+oakland = Team.create(name: "Oakland Raiders")
+la_chargers = Team.create(name: "Los Angeles Chargers")
+new_england = Team.create(name: "New England Patriots")
+buffalo = Team.create(name: "Buffalo Bills")
+ny_jets = Team.create(name: "New York Jets")
+miami = Team.create(name: "Miami Dolphins")
+baltimore = Team.create(name: "Baltimore Ravens")
+pittsburgh = Team.create(name: "Pittsburgh Steelers")
+cleveland = Team.create(name: "Cleveland Browns")
+cincinnati = Team.create(name: "Cincinnati Bengals")
+houston = Team.create(name: "Houston Texans")
+tennessee = Team.create(name: "Tennessee Titans")
+indianapolis = Team.create(name: "Indianapolis Colts")
+jacksonville = Team.create(name: "Jacksonville Jaguars")
+philadelphia = Team.create(name: "Philadelphia Eagles")
+dallas = Team.create(name: "Dallas Cowboys")
+washington = Team.create(name: "Washington Redskins")
+ny_giants = Team.create(name: "New York Giants")
+green_bay = Team.create(name: "Green Bay Packers")
+minnesota = Team.create(name: "Minnesota Vikings")
+chicago = Team.create(name: "Chicago Bears")
+detroit = Team.create(name: "Detroit Lions")
+new_orleans = Team.create(name: "New Orleans Saints")
+atlanta = Team.create(name: "Atlanta Falcons")
+tampa_bay = Team.create(name: "Tampa Bay Buccaneers")
+carolina = Team.create(name: "Carolina Panthers")
+san_francisco = Team.create(name: "San Francisco 49ers")
+seattle = Team.create(name: "Seattle Seahawks")
+la_rams = Team.create(name: "Los Angeles Rams")
+arizona = Team.create(name: "Arizona Cardinals")
 
 # Week 1
 game1 = Game.create(home: chicago, away: green_bay, week: week1, winner: green_bay, date: "9/05/2019", home_score: 3, away_score: 10)

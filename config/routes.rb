@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teams
   resources :selections
   resources :user_selections
   resources :games, only: [:index, :show, :create, :delete]
