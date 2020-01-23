@@ -10,5 +10,4 @@ class WeeksController < ApplicationController
         render json: @week 
     end 
 
-
 end
