@@ -9,10 +9,10 @@ class UserSelectionsController < ApplicationController
         render json: @user_selection
     end
 
-    def create
-        @user_selection.create({
+    # def create
+    #     @user_selection.create({
 
-        })
-        render json: @user_selection
-    end 
+    #     })
+    #     render json: @user_selection
+    # end 
 end
