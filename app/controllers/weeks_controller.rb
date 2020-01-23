@@ -2,7 +2,7 @@ class WeeksController < ApplicationController
 
     def index 
         @weeks = Week.all 
-        render json: @weeks, include: :games
+        render json: @weeks, include:[:games]
     end
 
     def show 

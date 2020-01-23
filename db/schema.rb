@@ -10,19 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_162830) do
+ActiveRecord::Schema.define(version: 2020_01_22_234618) do
 
   create_table "games", force: :cascade do |t|
     t.integer "week_id", null: false
-    t.string "home"
-    t.string "away"
-    t.string "winner"
+    t.integer "home_id"
+    t.integer "away_id"
+    t.integer "winner_id"
     t.string "date"
     t.integer "home_score"
     t.integer "away_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["away_id"], name: "index_games_on_away_id"
+    t.index ["home_id"], name: "index_games_on_home_id"
     t.index ["week_id"], name: "index_games_on_week_id"
+    t.index ["winner_id"], name: "index_games_on_winner_id"
   end
 
   create_table "selections", force: :cascade do |t|
@@ -56,7 +59,6 @@ ActiveRecord::Schema.define(version: 2020_01_22_162830) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
-    t.string "favoriteTeam"
   end
 
   create_table "weeks", force: :cascade do |t|
@@ -65,6 +67,9 @@ ActiveRecord::Schema.define(version: 2020_01_22_162830) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "games", "teams", column: "away_id"
+  add_foreign_key "games", "teams", column: "home_id"
+  add_foreign_key "games", "teams", column: "winner_id"
   add_foreign_key "games", "weeks"
   add_foreign_key "selections", "weeks"
   add_foreign_key "user_selections", "selections"

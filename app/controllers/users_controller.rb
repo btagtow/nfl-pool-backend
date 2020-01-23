@@ -2,12 +2,12 @@ class UsersController < ApplicationController
 
     def index 
         @users = User.all 
-        render json: @users
+        render json: @users, include: :favoriteTeam
     end 
 
     def show 
         @user = User.find(params[:id])
-        render json: @user
+        render json: @user, include: :favoriteTeam
     end
 
     def create 
@@ -16,8 +16,7 @@ class UsersController < ApplicationController
             last: params[:last],
             points: "2",
             status: "in",
-            image: params[:image],
-            favoriteTeam: params[:favoriteTeam]
+            image: params[:image]
         )
         render json: {message: "You have created a new user."}
     end

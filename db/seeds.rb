@@ -10,40 +10,14 @@ Week.destroy_all
 User.destroy_all
 Team.destroy_all
 
-
-new_england = "New England Patriots"
-buffalo = "Buffalo Bills"
-ny_jets = "New York Jets"
-miami = "Miami Dolphins"
-baltimore = "Baltimore Ravens"
-pittsburgh = "Pittsburgh Steelers"
-cleveland = "Cleveland Browns"
-cincinnati = "Cincinnati Bengals"
-houston = "Houston Texans"
-tennessee = "Tennessee Titans"
-indianapolis = "Indianapolis Colts"
-jacksonville = "Jacksonville Jaguars"
-kansas_city = "Kansas City Chiefs"
-denver = "Denver Broncos"
-oakland = "Oakland Raiders"
-la_chargers = "Los Angeles Chargers"
-philadelphia = "Philadelphia Eagles"
-dallas = "Dallas Cowboys"
-washington = "Washington Redskins"
-ny_giants = "New York Giants"
-green_bay = "Green Bay Packers"
-minnesota = "Minnesota Vikings"
-chicago = "Chicago Bears"
-detroit = "Detroit Lions"
-new_orleans = "New Orleans Saints"
-atlanta = "Atlanta Falcons"
-tampa_bay = "Tampa Bay Buccaneers"
-carolina = "Carolina Panthers"
-san_francisco = "San Francisco 49ers"
-seattle = "Seattle Seahawks"
-la_rams = "Los Angeles Rams"
-arizona = "Arizona Cardinals"
-tie = "Tie"
+# t.string "first"
+# t.string "last"
+# t.string "points"
+# t.string "status"
+# t.datetime "created_at", precision: 6, null: false
+# t.datetime "updated_at", precision: 6, null: false
+# t.string "image"
+# t.string "favoriteTeam"
 
 week1 = Week.create(week:1)
 week2 = Week.create(week:2)
@@ -86,9 +60,14 @@ san_francisco = Team.create(name: "San Francisco 49ers")
 seattle = Team.create(name: "Seattle Seahawks")
 la_rams = Team.create(name: "Los Angeles Rams")
 arizona = Team.create(name: "Arizona Cardinals")
+tie = Team.create(name: "Tie")
+
+
+
+# User.create(first: "Colin", last: "Kaepernick", points: "2", status: "in", image:"JK", favoriteTeam: denver)
 
 # Week 1
-game1 = Game.create(home: chicago, away: green_bay, week: week1, winner: green_bay, date: "9/05/2019", home_score: 3, away_score: 10)
+Game.create(home: chicago, away: green_bay, week: week1, winner: green_bay, date: "9/05/2019", home_score: 3, away_score: 10)
 Game.create(home: cleveland, away: tennessee, week: week1, winner: tennessee, date: "9/08/2019", home_score: 13, away_score: 43)
 Game.create(home: miami, away: baltimore, week: week1, winner: baltimore, date: "9/08/2019", home_score: 10, away_score: 54)
 Game.create(home: minnesota, away: atlanta, week: week1, winner: minnesota, date: "9/08/2019", home_score: 28, away_score: 12)
