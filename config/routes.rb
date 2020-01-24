@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :predictions
   resources :picks
   resources :teams
   resources :selections

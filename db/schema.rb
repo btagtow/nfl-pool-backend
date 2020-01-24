@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_033208) do
+ActiveRecord::Schema.define(version: 2020_01_24_152228) do
 
   create_table "games", force: :cascade do |t|
     t.integer "week_id", null: false
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 2020_01_24_033208) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "week"
+  end
+
+  create_table "predictions", force: :cascade do |t|
+    t.string "image"
+    t.integer "likes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "selections", force: :cascade do |t|
@@ -67,7 +74,6 @@ ActiveRecord::Schema.define(version: 2020_01_24_033208) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
-    t.integer "pointcount"
   end
 
   create_table "weeks", force: :cascade do |t|
