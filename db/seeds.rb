@@ -65,6 +65,8 @@ tie = Team.create(name: "Tie")
 
 
 User.create(first: "Colin", last: "Kaepernick", points: "2", status: "in", image:"JK")
+User.create(first: "Colin", last: "Kaepernick", points: "2", status: "in", image:"JK")
+User.create(first: "Colin", last: "Kaepernick", points: "2", status: "in", image:"JK")
 
 # Week 1
 Game.create(home: chicago, away: green_bay, week: week1, winner: green_bay, date: "9/05/2019", home_score: 3, away_score: 10)

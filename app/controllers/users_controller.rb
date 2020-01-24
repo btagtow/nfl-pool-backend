@@ -20,5 +20,11 @@ class UsersController < ApplicationController
         )
         render json: {message: "You have created a new user."}
     end
+    def update
+        @userUpdate = User.find(params[:id])
+        render json: @userUpdate
+
+    end
+
 
 end
